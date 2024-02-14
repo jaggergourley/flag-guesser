@@ -1,12 +1,16 @@
-import { useState } from "react";
-import Selector from "./components/selection";
+import React, { useState } from "react";
+import Selection from "./components/Selection";
+import Switch from "./components/Switch";
 import "./App.css";
 
 function App() {
+  const [isToggled, setIsToggled] = useState(false);
+
   return (
     <div>
       <h1>Welcome to my app</h1>
-      <Selector />
+      <Selection />
+      <Switch isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} />
     </div>
   );
 }
