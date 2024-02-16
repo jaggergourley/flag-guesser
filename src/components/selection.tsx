@@ -1,9 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import Switch from "./Switch";
+import Dropdown from "./Dropdown";
 
-export default function Selection() {
-  return <p>Select your quiz</p>;
+function Selection() {
+  const [isToggled, setIsToggled] = React.useState(false);
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+  const options = [
+    "All",
+    "Africa",
+    "Asia",
+    "Europe",
+    "Oceania",
+    "North America",
+    "South America",
+  ];
+  const [selectedOption, setSelectedOption] = React.useState("All");
+  const handleSelect = (option: string) => {
+    setSelectedOption(option);
+  };
+
+  return (
+    <>
+      <Switch isToggled={isToggled} onToggle={handleToggle} />
+      <Dropdown options={options} onSelect={handleSelect} />
+    </>
+  );
 }
 
-/* this component should handle the logic for the quiz selection*/
-/* based on input (switch and region) it should get only the relevant countries for the quiz*/
+export default Selection;
