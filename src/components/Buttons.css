@@ -1,0 +1,23 @@
+/* Buttons.css */
+.buttons {
+    display: flex;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .button.active {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .button:not(.active):hover {
+    background-color: #ddd;
+  }
