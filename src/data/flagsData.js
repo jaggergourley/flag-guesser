@@ -1,3 +1,5 @@
+// flagData.js
+
 const flagsData = [
   {
     country: "Abkhazia",

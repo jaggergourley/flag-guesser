@@ -1,9 +1,9 @@
-// Buttons.tsx
+// Buttons.jsx
+
 import React, { useState } from "react";
 import "./Buttons.css";
 
-const Buttons = () => {
-  const [active, setActive] = useState("All Countries");
+const Buttons = ({ active, setActive }) => {
 
   return (
     <div className="buttons">

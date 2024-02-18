@@ -1,9 +1,11 @@
-import React, { ChangeEvent } from "react";
+// Dropdown.jsx
+
+import React, { useState } from "react";
 import "./Dropdown.css";
 
-const Dropdown = () => {
+const Dropdown = ({ selectedOption, setSelectedOption }) => {
   const options = [
-    "All",
+    "All Continents",
     "Africa",
     "Asia",
     "Europe",
@@ -11,7 +13,6 @@ const Dropdown = () => {
     "North America",
     "South America",
   ];
-  const [selectedOption, setSelectedOption] = React.useState("All");
 
   const handleSelect = (event) => {
     setSelectedOption(event.target.value);
